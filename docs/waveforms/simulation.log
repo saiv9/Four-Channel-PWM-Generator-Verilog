@@ -1,0 +1,3 @@
+VCD info: dumpfile build/pwm_generator.vcd opened for output.
+PASS: 80 period-position checks completed
+tb/tb_pwm_generator.v:91: $finish called at 976000 (1ps)
