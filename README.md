@@ -4,6 +4,9 @@ A four-output PWM block written in Verilog. All channels share one period counte
 
 Duty settings are sampled at the start of a PWM period. That keeps the pulse width steady for the whole period even if an input changes partway through it. Values above 100 are limited to 100 percent.
 
+
+![Four channel PWM architecture](docs/architecture.svg)
+
 ## Interface
 
 | Signal | Direction | Meaning |
