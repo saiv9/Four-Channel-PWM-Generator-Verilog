@@ -23,7 +23,7 @@ The period is set with the `PERIOD_CYCLES` parameter. The number of high clock c
 Install Icarus Verilog and Python with Matplotlib, then run:
 
 ```bash
-./scripts/run_sim.sh
+bash ./scripts/run_sim.sh
 ```
 
 The testbench checks the output at every counter position, including 0 percent, 100 percent, mid-period updates, and inputs above 100 percent. The script saves the VCD, log, and waveform preview in `docs/waveforms/`.
