@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" rx="18" fill="#f5f8fc"/>
+<text x="42" y="55" font-family="Arial" font-size="30" font-weight="700" fill="#1f2a3d">Four-Channel PWM Generator</text>
+<text x="42" y="84" font-family="Arial" font-size="15" fill="#526680">Shared period counter with four independent duty settings</text>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6 Z" fill="#355f91"/></marker><marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L9 3 L0 6 Z" fill="#5b805f"/></marker></defs>
+<g font-family="Arial">
+<rect x="45" y="145" width="230" height="190" rx="14" fill="#fff" stroke="#26364b" stroke-width="2"/>
+<text x="80" y="183" font-size="19" font-weight="700" fill="#1f2a3d">Duty inputs</text><text x="80" y="220" font-size="15" fill="#526680">duty0, duty1</text><text x="80" y="248" font-size="15" fill="#526680">duty2, duty3</text><text x="80" y="290" font-size="13" fill="#71839b">0 to 100 percent</text><text x="80" y="312" font-size="13" fill="#71839b">Values above 100 are clamped</text>
+<rect x="365" y="145" width="260" height="190" rx="14" fill="#eaf0f7" stroke="#526984" stroke-width="2"/>
+<text x="405" y="183" font-size="19" font-weight="700" fill="#1f2a3d">Period registers</text><text x="405" y="220" font-size="15" fill="#344b68">Latch at period boundary</text><text x="405" y="252" font-size="15" fill="#344b68">Keep settings stable</text><text x="405" y="290" font-size="13" fill="#71839b">One active value per channel</text>
+<rect x="365" y="400" width="260" height="125" rx="14" fill="#eaf0f7" stroke="#526984" stroke-width="2"/>
+<text x="405" y="440" font-size="19" font-weight="700" fill="#1f2a3d">Period counter</text><text x="405" y="475" font-size="15" fill="#344b68">0 to PERIOD_CYCLES - 1</text><text x="405" y="502" font-size="13" fill="#71839b">Wraps once per PWM period</text>
+<rect x="730" y="250" width="205" height="170" rx="14" fill="#fff" stroke="#26364b" stroke-width="2"/>
+<text x="765" y="288" font-size="19" font-weight="700" fill="#1f2a3d">Comparators</text><text x="765" y="325" font-size="15" fill="#526680">counter < high time</text><text x="765" y="355" font-size="13" fill="#71839b">Four independent compares</text><text x="765" y="385" font-size="13" fill="#71839b">Integer cycle count</text>
+<rect x="1020" y="215" width="145" height="240" rx="14" fill="#edf4ed" stroke="#5b805f" stroke-width="2"/>
+<text x="1050" y="250" font-size="19" font-weight="700" fill="#243a2a">Outputs</text><text x="1050" y="292" font-size="17" fill="#526680">PWM 0</text><text x="1050" y="328" font-size="17" fill="#526680">PWM 1</text><text x="1050" y="364" font-size="17" fill="#526680">PWM 2</text><text x="1050" y="400" font-size="17" fill="#526680">PWM 3</text>
+<path d="M275 240 H365" stroke="#355f91" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M625 240 H730" stroke="#355f91" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M625 462 H680 V390 H730" stroke="#5b805f" stroke-width="3" fill="none" marker-end="url(#g)"/>
+<path d="M935 335 H1020" stroke="#5b805f" stroke-width="3" fill="none" marker-end="url(#g)"/>
+<text x="45" y="575" font-size="16" font-weight="700" fill="#1f2a3d">Duty cycle</text>
+<text x="45" y="605" font-size="14" fill="#526680">High time = floor(PERIOD_CYCLES × duty_percent / 100). All channels share the same period.</text>
+</g></svg>
